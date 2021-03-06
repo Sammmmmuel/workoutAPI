@@ -7,11 +7,13 @@ require('dotenv').config()
 
 // import routes 
 const postsRoute = require('./routes/add_wo')
+const authRoute = require('./routes/auth.js')
 
 // middleware
 app.use(bodyParser.json())
 app.use('/posts', postsRoute)
 app.use(cors())
+app.use('/api/user', authRoute)
 
 // routes 
 
@@ -28,4 +30,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
 
 // listen
 
-app.listen(3000)
+app.listen(3000, () => console.log('Server is up and running at port 3000'))
