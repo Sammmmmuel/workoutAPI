@@ -18,3 +18,5 @@ $ localhost:3000
 
 [auth](https://github.com/Sammmmmuel/workoutAPI/files/6094785/spaces--MV4qKrmUrvb8sDTUxUB-pdf-1250381649.pdf)
 
+## Routes 
+[routes](https://github.com/Sammmmmuel/workoutAPI/files/6094807/spaces--MV4qKrmUrvb8sDTUxUB-pdf-751226996.pdf)
