@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 require('dotenv').config()
 
 // import routes 
@@ -10,6 +11,7 @@ const postsRoute = require('./routes/add_wo')
 // middleware
 app.use(bodyParser.json())
 app.use('/posts', postsRoute)
+app.use(cors())
 
 // routes 
 
