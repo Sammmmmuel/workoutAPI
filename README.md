@@ -36,7 +36,7 @@ minimum of 6 characters
 Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    "name": "name",    "email": "name@email.com",    "password": "password"}
 ```
 {% endapi-method-response-example %}
@@ -46,15 +46,13 @@ Cake successfully retrieved.
 Could not find a cake matching this query.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    "message": "error"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
 {% api-method method="post" host="https://api.cakes.com" path="/api/user/login" %}
 {% api-method-summary %}
@@ -84,7 +82,7 @@ same password used to register
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Logged in!
 ```
 {% endapi-method-response-example %}
@@ -94,8 +92,8 @@ Logged in!
 
 {% endapi-method-response-example-description %}
 
-```
-access denied 
+```text
+access denied
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
