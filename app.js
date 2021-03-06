@@ -7,7 +7,7 @@ require('dotenv').config()
 
 // import routes 
 const postsRoute = require('./routes/add_wo')
-const authRoute = require('./routes/auth.js')
+const authRoute = require('./routes/auth')
 
 // middleware
 app.use(bodyParser.json())
