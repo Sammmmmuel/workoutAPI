@@ -4,14 +4,17 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
+// import routes 
+const postsRoute = require('./routes/add_wo')
+
 // middleware
 app.use(bodyParser.json())
-
+app.use('/posts', postsRoute)
 
 // routes 
 
 app.get('/', (req, res) => {
-    res.send("Hello World!")
+    res.send("We are on home!")
 })
 
 
@@ -23,4 +26,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
 
 // listen
 
-app.listen(6000)
+app.listen(3000)
