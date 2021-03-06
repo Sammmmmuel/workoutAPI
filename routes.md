@@ -1,6 +1,6 @@
 # Routes
 
-{% api-method method="post" host="https://api.cakes.com" path="/posts" %}
+{% api-method method="post" host="http://localhost:3000" path="/posts" %}
 {% api-method-summary %}
 Get Workouts
 {% endapi-method-summary %}
@@ -56,7 +56,9 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.cakes.com" path="/posts" %}
+
+
+{% api-method method="get" host="http://localhost:3000" path="/posts" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -102,7 +104,7 @@ token needed
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="patch" host="https://api.cakes.com" path="/posts/:postId" %}
+{% api-method method="patch" host="http://localhost:3000" path="/posts/:postId" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -148,7 +150,7 @@ name of workout
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.cakes.com" path="/posts/:postId" %}
+{% api-method method="get" host="http://localhost:3000" path="/posts/:postId" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -186,7 +188,7 @@ id from specific workout thats being searched
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://api.cakes.com" path="/posts/:postId" %}
+{% api-method method="delete" host="http://localhost:3000" path="/posts/:postId" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}

@@ -4,7 +4,7 @@ description: routes
 
 # authentification
 
-{% api-method method="post" host="https://api.cakes.com" path="/api/user/register" %}
+{% api-method method="post" host="http://localhost:3000" path="/api/user/register" %}
 {% api-method-summary %}
 workouts
 {% endapi-method-summary %}
@@ -54,7 +54,7 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.cakes.com" path="/api/user/login" %}
+{% api-method method="post" host="http://localhost:3000" path="/api/user/login" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
