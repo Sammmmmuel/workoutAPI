@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const Post = require('../model/AddWo')
+const verify = require('./verifyToken')
 
 
 
 // get back all posts
-router.get('/', async(req, res) => {
+router.get('/', verify, async(req, res) => {
     try {
         const posts = await Post.find()
         res.json(posts)
@@ -16,7 +17,7 @@ router.get('/', async(req, res) => {
 
 
 // submits a post
-router.post('/', (req, res) => {
+router.post('/', verify, (req, res) => {
     const post = new Post({
         name: req.body.name,
         bodyPart: req.body.bodyPart,
@@ -32,7 +33,7 @@ router.post('/', (req, res) => {
 })
 
 // gets specific post
-router.get('/:postId', async(req, res) => {
+router.get('/:postId', verify, async(req, res) => {
     try {
         const post = await Post.findById(req.params.postId)
         res.json(post)
@@ -42,7 +43,7 @@ router.get('/:postId', async(req, res) => {
 })
 
 // delete post 
-router.delete('/:postId', async(req, res) => {
+router.delete('/:postId', verify, async(req, res) => {
     try {
         const removedPost = await Post.remove({ _id: req.params.postId })
         res.json(removedPost)
@@ -52,7 +53,7 @@ router.delete('/:postId', async(req, res) => {
 })
 
 // update post
-router.patch('/:postId', async(req, res) => {
+router.patch('/:postId', verify, async(req, res) => {
     try {
         const updatedPost = await Post.updateOne({ _id: req.params.postId }, { $set: { title: req.body.title } })
         res.json(updatedPost)
